@@ -21,7 +21,7 @@ def main():
 
     st = time.time()
     logger.info("Initializing model...")
-    topic_model = BERTopic(language="english", calculate_probabilities=True, verbose=True)
+    topic_model = BERTopic(language="english", verbose=True)
     logger.info("Model initialized (took {} seconds).".format(time.time() - st))
     
     st = time.time()
