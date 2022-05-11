@@ -15,7 +15,7 @@ def main():
     st = time.time()
     logger.info("Loading data from mongo db...")
     df = load_data_for_tm()
-    logger.info("Data Loaded (took {} seconds).".format(time.time() - st))
+    logger.info("Data Loaded with {} samples (took {} seconds).".format(len(df), time.time() - st))
 
     text_list = df.body.tolist()
 
