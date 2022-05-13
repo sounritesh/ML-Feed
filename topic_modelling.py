@@ -9,6 +9,8 @@ import time
 parser = ArgumentParser()
 
 parser.add_argument("--output_dir", type=str, default="")
+parser.add_argument("--num_topics", type=int, default=150)
+
 args = parser.parse_args()
 
 def main():

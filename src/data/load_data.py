@@ -14,6 +14,6 @@ def load_data_for_tm():
         if is_top_level:
             thought_list.append(thought)
     print("{} thoughts retrieved from client.".format(len(thought_list)))
-    df_thoughts = pd.DataFrame(thought_list)[["_id", "body", "author"]]
+    df_thoughts = pd.DataFrame(thought_list)[["_id", "created_at","body", "author"]]
 
     return df_thoughts
