@@ -8,7 +8,7 @@ import pandas as pd
 from tqdm import tqdm
 
 parser = ArgumentParserr()
-parser.add_argument("--dir", default="", type=str)
+parser.add_argument("--dir", default="", type=str, help="Directory path to saved model.")
 
 args = parser.parse_args()
 
