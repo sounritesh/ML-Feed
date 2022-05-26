@@ -10,14 +10,14 @@ BASE_DIR = "DataFiles/"
 st.cache()
 def load_data():
     ct = pd.read_csv(os.path.join(BASE_DIR, "child_thoughts_scored.csv"))
-    pt = pd.read_csv(os.path.join(BASE_DIR, "modeled_thoughts_160.csv"))
+    pt = pd.read_csv(os.path.join(BASE_DIR, "modeled_thoughts_250.csv"))
     pt.dropna(inplace=True)
     pt.topic = pt.topic.astype(int)
 
     scores = pd.read_csv(os.path.join(BASE_DIR, "user_scores.csv"))
     scores_arr = np.load(os.path.join(BASE_DIR, "user_scores.npy"))
 
-    topic_map = pd.read_csv(os.path.join(BASE_DIR, "topic_map.csv"))
+    topic_map = pd.read_csv(os.path.join(BASE_DIR, "topic_map_250.csv"))
     return ct, pt, scores, scores_arr, topic_map
 
 ct, pt, scores, scores_arr, topic_map = load_data()

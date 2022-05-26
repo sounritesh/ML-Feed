@@ -99,6 +99,7 @@ def main():
     st = time.time()
     logger.info("Saving output to {}...".format(args.output_dir))
     df["topic"] = topics
+    df = df[["_id", "created_at", "author", "topic"]]
     df.to_csv(os.path.join(args.output_dir, "modeled_thoughts.csv"), index=False)
     logger.info("Output saved (took {} seconds).".format(time.time() - st))
     logger.info("Done!")
